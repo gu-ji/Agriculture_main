@@ -248,7 +248,7 @@
             clearable
             filterable
             placeholder="选择操作人"
-            style="width: 300px"
+            style="width: 150px"
           >
             <el-option
               v-for="item in buyers"
@@ -289,28 +289,29 @@
           </div>
           <div class="personal-border jmu-border-1px border-bottom"></div>
         </div>
+
         <div>
           <div style="margin-top: 200px" class="headerr">
-            <div style="width: 360px; height: 40px; float: left">
+            <div style="width: 300px; height: 40px; float: left">
               <h3 style="padding-top: 10px; font-size: 15px">入库商品</h3>
             </div>
-            <div style="width: 360px; height: 40px; float: left">
+            <div style="width: 200px; height: 40px; float: left">
               <h3 style="padding-top: 10px; font-size: 15px">入库数量</h3>
             </div>
-            <div style="width: 360px; height: 40px; float: left">
+            <div style="width: 200px; height: 40px; float: left">
               <h3 style="padding-top: 10px; font-size: 15px">数量单位</h3>
             </div>
-            <div style="width: 360px; height: 40px; float: left">
+            <div style="width: 300px; height: 40px; float: left">
               <h3 style="padding-top: 10px; font-size: 15px">单价</h3>
             </div>
-            <div style="width: 360px; height: 40px; float: left">
+            <div style="width: 150px; height: 40px; float: left">
               <h3 style="padding-top: 10px; font-size: 15px">总价格</h3>
             </div>
           </div>
           <div style="width: 100%; height: 50px; border-bottom: 1px solid #eee">
             <el-form-item style="width: 300px; float: left" prop="putName">
               <el-select
-                style="width: 300px; margin-top: 10px; float: left"
+                style="width: 230px; margin-top: 10px; float: left"
                 @change="getkucun"
                 v-model="form1.putName"
                 placeholder="请选择入库商品"
@@ -326,20 +327,20 @@
               </el-select>
             </el-form-item>
 
-            <el-form-item style="width: 360px; float: left" prop="buyCount">
+            <el-form-item style="width: 150px; float: left" prop="buyCount">
               <el-input-number
                 @change="calculate2"
                 type="number"
                 placeholder="入库数量"
-                style="width: 360px; margin-top: 10px; float: left"
+                style="width: 100px; margin-top: 10px; float: left"
                 v-model="form1.buyCount"
               ></el-input-number>
             </el-form-item>
-            <el-form-item style="width: 300px; float: left" prop="buyUnit">
+            <el-form-item style="width: 200px; float: left" prop="buyUnit">
               <el-cascader
                 v-model="form1.buyUnit"
                 placeholder="选择数量单位"
-                style="width: 300px; margin-top: 10px; float: left"
+                style="width: 150px; margin-top: 10px; float: left"
                 ref="cascaderAddr"
                 :options="menuData"
                 :props="{
@@ -354,13 +355,13 @@
               >
               </el-cascader>
             </el-form-item>
-            <el-form-item style="width: 360px; float: left" prop="price">
+            <el-form-item style="width: 200px; float: left" prop="price">
               <el-input-number
                 @change="calculate3"
                 type="number"
                 v-model="form1.price"
                 placeholder="单价"
-                style="width: 360px; margin-top: 10px; float: left"
+                style="width: 200px; margin-top: 10px; float: left"
               ></el-input-number>
             </el-form-item>
             <el-form-item style="width: 360px; float: left" prop="saleTotal">
@@ -1200,17 +1201,21 @@ export default {
           this.buys = res.data.records;
         });
     },
-    //编辑时
     getkucun(value) {
       this.productData.forEach((item) => {
         if (item.id === value) {
-          console.log(item);
-          this.proStock = item.proStock;
-          this.form1.saleSupplier = item.proFrom;
-          this.form1.flowerid = item.id;
-          this.form1.proCost = item.proCost;
-          this.form1.saleName = item.id;
-          console.log(this.form1.proCost + "dddddddd");
+          // console.log(item);
+          if (item && item.proStock) {
+            this.proStock = item.proStock;
+            // 其他属性赋值
+            this.form1.saleSupplier = item.proFrom;
+            this.form1.flowerid = item.id;
+            this.form1.proCost = item.proCost || 0; // 如果有可能成本也为null，加上默认值
+            this.form1.saleName = item.id;
+            // console.log(this.form1.proCost + "dddddddd");
+          } else {
+            // console.error('Item does not have a proStock property.');
+          }
         }
       });
     },
