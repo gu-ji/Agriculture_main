@@ -16,20 +16,20 @@ import java.util.Date;
  */
 @Data
 @TableName(value = "fl_foster")
-@ApiModel(value = "寄养信息",description = "")
+@ApiModel(value = "寄卖信息",description = "")
 public class Foster {
 
     @ApiModelProperty("编号")
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty("寄养人")
+    @ApiModelProperty("寄卖人")
     private String sender;
 
     @ApiModelProperty("联系方式")
     private String phone;
 
-    @ApiModelProperty("寄养植物名称")
+    @ApiModelProperty("寄卖农产品名称")
     private String fosName;
 
     @ApiModelProperty("品种")
@@ -41,10 +41,10 @@ public class Foster {
     @ApiModelProperty("养护备注")
     private String fosNote;
 
-    @ApiModelProperty("寄养开始日期")
+    @ApiModelProperty("寄卖开始日期")
     private Date fosStarttime;
 
-    @ApiModelProperty("寄养结束日期")
+    @ApiModelProperty("寄卖结束日期")
     private Date fosEndtime;
 
     @ApiModelProperty("单天价格")

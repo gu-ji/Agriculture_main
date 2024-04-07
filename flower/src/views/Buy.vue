@@ -185,7 +185,7 @@
               >
               <el-dropdown-item
                 v-if="
-                  adname.role === 'ROLE_ADMIN' && scope.row.buyStatus === null
+                  adname.role === 'ROLE_ADMIN' && scope.row.buyStatus === nopass
                 "
                 @click.native="handleCheck(scope.row)"
                 ><i class="el-icon-s-check"></i> 审核</el-dropdown-item
@@ -305,29 +305,29 @@
         </div>
         <div>
           <div style="margin-top: 200px" class="headerr">
-            <div style="width: 400px; height: 40px; float: left">
+            <div style="width: 260px; height: 40px; float: left">
               <h3 style="padding-top: 10px; font-size: 15px">采购商品</h3>
             </div>
-            <div style="width: 400px; height: 40px; float: left">
+            <div style="width: 260px; height: 40px; float: left">
               <h3 style="padding-top: 10px; font-size: 15px">供应商</h3>
             </div>
-            <div style="width: 400px; height: 40px; float: left">
+            <div style="width: 260px; height: 40px; float: left">
               <h3 style="padding-top: 10px; font-size: 15px">采购数</h3>
             </div>
-            <div style="width: 350px; height: 40px; float: left">
+            <div style="width: 260px; height: 40px; float: left">
               <h3 style="padding-top: 10px; font-size: 15px">单位</h3>
             </div>
-            <div style="width: 300px; height: 40px; float: left">
+            <div style="width: 260px; height: 40px; float: left">
               <h3 style="padding-top: 10px; font-size: 15px">单价</h3>
             </div>
           </div>
           <div style="width: 100%; height: 50px; border-bottom: 1px solid #eee">
             <el-form-item
-              style="width: 280px; margin-top: 10px; float: left"
+              style="width: 260px; margin-top: 10px; float: left"
               prop="buyName"
             >
               <el-select
-                style="width: 280px"
+                style="width: 230px"
                 v-model="form1.buyName"
                 placeholder="请选择采购商品"
               >
@@ -340,10 +340,10 @@
                 </el-option>
               </el-select>
             </el-form-item>
-            <el-form-item style="width: 350px; float: left" prop="buySupplier">
+            <el-form-item style="width: 230px; float: left" prop="buySupplier">
               <el-select
                 style="
-                  width: 350px;
+                  width: 230px;
                   margin-top: 10px;
                   float: left;
                   margin-left: 10px;
@@ -360,11 +360,11 @@
                 </el-option>
               </el-select>
             </el-form-item>
-            <el-form-item style="width: 400px; float: left" prop="buyCount">
+            <el-form-item style="width: 250px; float: left" prop="buyCount">
               <el-input-number
                 placeholder="采购数量"
                 style="
-                  width: 390px;
+                  width: 200px;
                   margin-top: 10px;
                   float: left;
                   margin-left: 10px;
@@ -372,12 +372,12 @@
                 v-model="form1.buyCount"
               ></el-input-number>
             </el-form-item>
-            <el-form-item style="width: 400px; float: left" prop="buyUnit">
+            <el-form-item style="width: 250px; float: left" prop="buyUnit">
               <el-cascader
                 v-model="form1.buyUnit"
                 placeholder="选择数量单位"
                 style="
-                  width: 290px;
+                  width: 180px;
                   margin-top: 10px;
                   float: left;
                   margin-left: 10px;
@@ -396,14 +396,14 @@
               >
               </el-cascader>
             </el-form-item>
-            <el-form-item style="width: 400px; float: left" prop="buyPrice">
+            <el-form-item style="width: 280px; float: left" prop="buyPrice">
               <el-input-number
                 placeholder="请输入单价"
                 style="
-                  width: 390px;
+                  width: 280px;
                   margin-top: 10px;
                   float: left;
-                  margin-left: -90px;
+                  margin-left: 10px;
                 "
                 v-model="form1.buyPrice"
               ></el-input-number>
@@ -906,6 +906,7 @@ export default {
       form1: {
         buynewid: "33",
         buyStatus: "未通过",
+        // buyStatus: " ",
       },
       agentData: [
         {

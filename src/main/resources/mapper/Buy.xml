@@ -26,6 +26,18 @@
             <if test="endTime!=null and endTime.trim() neq ''">
                 and buy_date &lt;= date_format(#{endTime},'%Y-%m-%d')
             </if>
+
+            <if test="buyStatus!=null and buyStatus != ''">
+                and buy_status like concat('%', #{buyStatus},'%')
+            </if>
+
+            <if test="reviewer!=null and reviewer != ''">
+                and reviewer like concat('%', #{reviewer},'%')
+            </if>
+
+            <if test="reviewdate!=null and reviewdate.trim() neq ''">
+                and reviewdate &lt;= date_format(#{reviewdate},'%Y-%m-%d')
+            </if>
         </where>
     </select>
     <select id="findPage1" resultType="com.lm.flowershop.entity.Buy">

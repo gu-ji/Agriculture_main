@@ -98,14 +98,14 @@ CREATE TABLE `fl_customer` (
 DROP TABLE IF EXISTS `fl_foster`;
 CREATE TABLE `fl_foster` (
   `id` int NOT NULL AUTO_INCREMENT COMMENT '编号',
-  `sender` varchar(10) NOT NULL COMMENT '寄养人',
+  `sender` varchar(10) NOT NULL COMMENT '寄卖人',
   `phone` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '联系方式',
-  `fos_Name` varchar(20) NOT NULL COMMENT '寄养植物名称',
+  `fos_Name` varchar(20) NOT NULL COMMENT '寄卖农产品名称',
   `fos_Variety` varchar(10) NOT NULL COMMENT '品种',
   `fos_Url` varchar(225) NOT NULL COMMENT '图片',
   `fos_Note` varchar(225) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '养护备注',
-  `fos_Starttime` date NOT NULL COMMENT '寄养开始日期',
-  `fos_Endtime` date DEFAULT NULL COMMENT '寄养结束日期',
+  `fos_Starttime` date NOT NULL COMMENT '寄卖开始日期',
+  `fos_Endtime` date DEFAULT NULL COMMENT '寄卖结束日期',
   `fos_Price` double NOT NULL COMMENT '单天价格',
   `fos_Total` double DEFAULT NULL COMMENT '总价',
   `fos_Status` varchar(3) NOT NULL COMMENT '支付状态',
@@ -421,7 +421,7 @@ INSERT INTO `sys_menu` VALUES ('12', '入库管理', '/putstorage', 'el-icon-sol
 INSERT INTO `sys_menu` VALUES ('13', '入库统计', '/puttotal', 'el-icon-s-data', null, '7', 'Puttotal');
 INSERT INTO `sys_menu` VALUES ('14', '出库管理', '/outstorage', 'el-icon-sell', null, '7', 'Outstorage');
 INSERT INTO `sys_menu` VALUES ('15', '出库统计', '/outtotal', 'el-icon-s-data', null, '7', 'Outtotal');
-INSERT INTO `sys_menu` VALUES ('16', '寄养服务管理', '/foster', 'el-icon-box', null, '7', 'Foster');
+INSERT INTO `sys_menu` VALUES ('16', '寄卖服务管理', '/foster', 'el-icon-box', null, '7', 'Foster');
 INSERT INTO `sys_menu` VALUES ('17', '商品管理', null, 'el-icon-s-shop', null, null, null);
 INSERT INTO `sys_menu` VALUES ('18', '农产品管理', '/flower', 'el-icon-goods', null, '17', 'Flower');
 INSERT INTO `sys_menu` VALUES ('19', '农产品类别管理', '/sort', 'el-icon-notebook-1', null, '17', 'Sort');

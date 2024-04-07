@@ -7,7 +7,7 @@
       size="small"
       class="demo-form-inline"
     >
-      <el-form-item label="寄养人手机号">
+      <el-form-item label="寄卖人手机号">
         <el-input
           v-model="phone"
           style="width: 300px"
@@ -17,12 +17,12 @@
         </el-input>
       </el-form-item>
 
-      <el-form-item label="寄养植物：">
+      <el-form-item label="寄卖农产品：">
         <el-input
           v-model="fosName"
           style="width: 300px"
           clearable
-          placeholder="请输寄养植物名称"
+          placeholder="请输寄卖农产品名称"
         >
         </el-input>
       </el-form-item>
@@ -92,7 +92,7 @@
       </el-form-item>
       <div>
         <el-button icon="Plus" @click="handleAddbuy" style="margin-left: 10px"
-          ><i class="el-icon-circle-plus-outline"></i>新增寄养信息</el-button
+          ><i class="el-icon-circle-plus-outline"></i>新增寄卖信息</el-button
         >
         <el-popconfirm
           class="ml-5"
@@ -122,11 +122,11 @@
       <el-table-column type="selection" width="55"></el-table-column>
       <el-table-column style="color: blue" prop="id" label="编号" width="220">
       </el-table-column>
-      <el-table-column prop="sender" label="寄养人" width="220">
+      <el-table-column prop="sender" label="寄卖人" width="220">
       </el-table-column>
       <el-table-column prop="phone" label="联系方式" width="220">
       </el-table-column>
-      <el-table-column prop="fosName" label="寄养植物" width="220">
+      <el-table-column prop="fosName" label="寄卖农产品" width="220">
       </el-table-column>
 
       <el-table-column prop="fosVariety" label="品种" width="220">
@@ -185,14 +185,14 @@
     </div>
 
     <!-- -----------------------------------------弹出框1--------------------------------------------------------------------- -->
-    <!-- 新增寄养信息 -->
+    <!-- 新增寄卖信息 -->
     <el-dialog
       :visible.sync="dialogFormVisible"
       :show-close="dd"
       :close-on-click-modal="aa"
     >
       <template slot="title">
-        <div style="font-size: 25px; font-weight: bold">新增寄养信息</div>
+        <div style="font-size: 25px; font-weight: bold">新增寄卖信息</div>
       </template>
       <el-form
         :model="form"
@@ -203,7 +203,7 @@
         size="small"
         class="demo-form-inline"
       >
-        <el-form-item label="寄养人" style="margin-left: 50px" prop="sender">
+        <el-form-item label="寄卖人" style="margin-left: 50px" prop="sender">
           <el-input
             v-model="form.sender"
             autocomplete="off"
@@ -222,7 +222,7 @@
         </el-form-item>
 
         <el-form-item
-          label="寄养植物名称"
+          label="寄卖农产品名称"
           style="margin-left: 10px"
           prop="fosName"
         >
@@ -346,7 +346,7 @@
         size="small"
         class="demo-form-inline"
       >
-        <el-form-item label="寄养人" style="margin-left: 50px">
+        <el-form-item label="寄卖人" style="margin-left: 50px">
           <el-input
             disabled
             v-model="form.sender"
@@ -366,7 +366,7 @@
           </el-input>
         </el-form-item>
 
-        <el-form-item label="寄养植物名称" style="margin-left: 10px">
+        <el-form-item label="寄卖农产品名称" style="margin-left: 10px">
           <el-input
             disabled
             v-model="form.fosName"
@@ -454,10 +454,10 @@
       </div>
     </el-dialog>
 
-    <!-- 查看寄养信息 -->
+    <!-- 查看寄卖信息 -->
     <el-dialog :visible.sync="vis" :show-close="dd" :close-on-click-modal="aa">
       <template slot="title">
-        <div style="font-size: 25px; font-weight: bold">查看寄养信息</div>
+        <div style="font-size: 25px; font-weight: bold">查看寄卖信息</div>
       </template>
       <el-form
         :model="form"
@@ -468,13 +468,13 @@
         size="small"
         class="demo-form-inline"
       >
-        <span class="ml_fs"> 寄养人: </span>
+        <span class="ml_fs"> 寄卖人: </span>
         <span class="fs" style="font-size: 16px">{{ form.sender }}</span>
 
         <span class="ml_fs"> 联系方式: </span>
         <span class="fs">{{ form.phone }}</span>
 
-        <span class="ml_fs"> 寄养植物名称: </span>
+        <span class="ml_fs"> 寄卖农产品名称: </span>
         <span class="fs">{{ form.fosName }}</span>
 
         <span class="ml_fs"> 品种: </span>
@@ -637,7 +637,7 @@ export default {
 
       rules: {
         sender: [
-          { required: true, message: "寄养人不能为空", trigger: "blur" },
+          { required: true, message: "寄卖人不能为空", trigger: "blur" },
         ],
         phone: [
           { required: true, message: "联系方式不能为空", trigger: "blur" },
@@ -650,7 +650,7 @@ export default {
         fosName: [
           {
             required: true,
-            message: "寄养植物不能为空",
+            message: "寄卖农产品不能为空",
             trigger: ["blur", "change"],
           },
         ],
@@ -810,7 +810,7 @@ export default {
         new Date(this.form.fosEndtime1).getTime() -
         new Date(this.form.fosStarttime).getTime(); //日期转时间戳
       this.dayCount = Math.floor(day / 86400000); //时间戳获取天数
-      console.log(this.dayCount + "寄养天数");
+      console.log(this.dayCount + "寄卖天数");
 
       // this.finalpay=this.num1 - this.num2
       this.fosTotal1 = this.dayCount * this.form.fosPrice;
