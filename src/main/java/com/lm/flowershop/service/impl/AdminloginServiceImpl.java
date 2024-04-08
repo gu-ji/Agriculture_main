@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author lm
- * @create 2022-03-21 18:22
+ * @create 2024-03-21 18:22
  */
 @Service
 public class AdminloginServiceImpl extends ServiceImpl<AdminloginMapper, Adminlogin> implements IAdminloginService {

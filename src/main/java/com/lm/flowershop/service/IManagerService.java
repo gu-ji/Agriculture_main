@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * @author lm
- * @create 2022-03-21 18:24
+ * @create 2024-03-21 18:24
  */
 public interface IManagerService extends IService<Manager> {
     ManagerDTO login(ManagerDTO managerDTO);

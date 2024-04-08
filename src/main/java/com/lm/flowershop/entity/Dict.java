@@ -5,7 +5,7 @@ import lombok.Data;
 
 /**
  * @author lm
- * @create 2022-03-27 8:46
+ * @create 2024-03-27 8:46
  */
 @TableName("sys_dict")
 @Data

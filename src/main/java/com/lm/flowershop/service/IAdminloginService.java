@@ -9,7 +9,7 @@ import com.lm.flowershop.entity.Manager;
 
 /**
  * @author lm
- * @create 2022-03-21 18:24
+ * @create 2024-03-21 18:24
  */
 public interface IAdminloginService extends IService<Adminlogin> {
 

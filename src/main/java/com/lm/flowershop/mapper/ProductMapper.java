@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Select;
 
 /**
  * @author lm
- * @create 2022-03-26 15:27
+ * @create 2024-03-26 15:27
  */
 public interface ProductMapper extends BaseMapper<Product> {
     Page<Product> findPage(Page<Product> page,@Param("name") String name,@Param("psort") String psort);

@@ -185,7 +185,7 @@
               >
               <el-dropdown-item
                 v-if="
-                  adname.role === 'ROLE_ADMIN' && scope.row.buyStatus === nopass
+                  adname.role === 'ROLE_ADMIN'
                 "
                 @click.native="handleCheck(scope.row)"
                 ><i class="el-icon-s-check"></i> 审核</el-dropdown-item
@@ -905,7 +905,7 @@ export default {
       value: [],
       form1: {
         buynewid: "33",
-        buyStatus: "未通过",
+        buyStatus: "未审核",
         // buyStatus: " ",
       },
       agentData: [
@@ -916,6 +916,10 @@ export default {
         {
           value: "未通过",
           label: "未通过",
+        },
+        {
+          value: "未审核",
+          label: "未审核",
         },
       ],
       pickerOptions: {

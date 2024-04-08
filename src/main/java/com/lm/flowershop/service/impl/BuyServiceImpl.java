@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 
 /**
  * @author lm
- * @create 2022-03-26 15:23
+ * @create 2024-03-26 15:23
  */
 @Service
 public class BuyServiceImpl extends ServiceImpl<BuyMapper, Buy> implements IBuyService {

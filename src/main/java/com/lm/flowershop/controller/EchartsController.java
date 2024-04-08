@@ -21,7 +21,7 @@ import java.util.Map;
 
 /**
  * @author lm
- * @create 2022-03-25 16:57
+ * @create 2024-03-25 16:57
  */
 @RestController
 @RequestMapping("/echarts")

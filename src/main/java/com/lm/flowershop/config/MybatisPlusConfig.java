@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author lm
- * @create 2022-03-19 9:43
+ * @create 2024-03-19 9:43
  */
 @Configuration
 @MapperScan("com.lm.flowershop.mapper")

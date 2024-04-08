@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  * @author lm
- * @create 2022-03-26 15:27
+ * @create 2024-03-26 15:27
  */
 public interface SaleMapper extends BaseMapper<Sale> {
      Page<Sale> findPage(Page<Sale> page, String saleId);

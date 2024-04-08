@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  * @author lm
- * @create 2022-04-01 15:38
+ * @create 2024-04-01 15:38
  */
 @Data
 @TableName(value = "fl_buy")

@@ -7,7 +7,7 @@ import com.lm.flowershop.entity.Sale;
 
 /**
  * @author lm
- * @create 2022-03-26 15:27
+ * @create 2024-03-26 15:27
  */
 public interface PutMapper extends BaseMapper<Putstorage> {
     Page<Putstorage> findPage(Page<Putstorage> page, String putId, String putOper, String startTime, String endTime);

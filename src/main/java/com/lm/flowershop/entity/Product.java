@@ -9,7 +9,7 @@ import lombok.Data;
 
 /**
  * @author lm
- * @create 2022-03-28 10:36
+ * @create 2024-03-28 10:36
  */
 @TableName("fl_product")
 @Data

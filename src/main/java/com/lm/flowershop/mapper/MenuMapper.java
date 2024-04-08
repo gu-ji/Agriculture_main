@@ -5,7 +5,7 @@ import com.lm.flowershop.entity.Menu;
 
 /**
  * @author lm
- * @create 2022-03-26 15:27
+ * @create 2024-03-26 15:27
  */
 public interface MenuMapper extends BaseMapper<Menu> {
 }

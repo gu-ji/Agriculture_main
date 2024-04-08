@@ -771,6 +771,11 @@
               <i class="el-icon-view"></i>
               查看
             </el-button>
+            <el-button type="primary" @click="cellDblClick(scope.row)">
+              <i class="el-icon-circle-plus"></i>
+              导入
+            </el-button>
+
           </template>
         </el-table-column>
       </el-table>

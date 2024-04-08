@@ -2,7 +2,7 @@ package com.lm.flowershop.config;
 
 /**
  * @author lm
- * @create 2022-03-18 16:18
+ * @create 2024-03-18 16:18
  */
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

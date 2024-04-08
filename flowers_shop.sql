@@ -1,18 +1,3 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : 本机
-Source Server Version : 50723
-Source Host           : localhost:3306
-Source Database       : flowers_shop
-
-Target Server Type    : MYSQL
-Target Server Version : 80027
-File Encoding         : 65001
-
-Date: 2022-06-29 18:18:11
-*/
-
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------

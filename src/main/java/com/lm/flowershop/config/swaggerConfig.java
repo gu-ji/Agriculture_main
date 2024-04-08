@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 /**
  * @author lm
- * @create 2022-03-19 10:29
+ * @create 2024-03-19 10:29
  */
 @Configuration
 @EnableOpenApi

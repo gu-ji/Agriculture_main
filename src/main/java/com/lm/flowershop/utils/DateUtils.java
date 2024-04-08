@@ -9,7 +9,7 @@ import java.util.GregorianCalendar;
 
 /**
  * @author lm
- * @create 2022-04-12 20:57
+ * @create 2024-04-12 20:57
  */
 public class DateUtils {
     public static String dateFormat(Date date, String pattern){

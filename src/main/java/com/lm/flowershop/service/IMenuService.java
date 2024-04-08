@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @author lm
- * @create 2022-03-26 15:24
+ * @create 2024-03-26 15:24
  */
 public interface IMenuService extends IService<Menu> {
     List<Menu> findMenus(String name);

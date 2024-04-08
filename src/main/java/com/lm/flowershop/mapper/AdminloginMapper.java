@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Update;
 
 /**
  * @author lm
- * @create 2022-03-17 16:12
+ * @create 2024-03-17 16:12
  */
 
 public interface AdminloginMapper extends BaseMapper<Adminlogin> {

@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * @author lm
- * @create 2022-03-26 15:27
+ * @create 2024-03-26 15:27
  */
 public interface RoleMenuMapper extends BaseMapper<RoleMenu> {
 

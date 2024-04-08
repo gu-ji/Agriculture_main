@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Param;
 
 /**
  * @author lm
- * @create 2022-03-26 15:27
+ * @create 2024-03-26 15:27
  */
 public interface CustomerMapper extends BaseMapper<Customer> {
     Page<Customer> findPage(Page<Customer> page, @Param("cusName") String cusName);

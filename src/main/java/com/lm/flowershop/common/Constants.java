@@ -2,7 +2,7 @@ package com.lm.flowershop.common;
 
 /**
  * @author lm
- * @create 2022-03-22 10:43
+ * @create 2024-03-22 10:43
  */
 public interface Constants {
     String CODE_200 ="200";//成功

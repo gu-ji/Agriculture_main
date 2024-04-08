@@ -6,7 +6,7 @@ import com.lm.flowershop.entity.Buy;
 
 /**
  * @author lm
- * @create 2022-03-26 15:27
+ * @create 2024-03-26 15:27
  */
 public interface BuyMapper extends BaseMapper<Buy> {
      Page<Buy> findPage(Page<Buy> page, String buyid, String buyApply,String buyer,String buyName, String buyStatus, String startTime, String endTime);

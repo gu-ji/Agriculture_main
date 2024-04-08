@@ -5,7 +5,7 @@ import com.lm.flowershop.entity.Files;
 
 /**
  * @author lm
- * @create 2022-03-24 9:34
+ * @create 2024-03-24 9:34
  */
 public interface FileMapper extends BaseMapper<Files> {
 }
