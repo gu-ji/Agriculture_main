@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lm.flowershop.mapper.SortMapper">
-    <resultMap id="pageSort" type="com.lm.flowershop.entity.Sort">
+<mapper namespace="com.lm.agriculture.mapper.SortMapper">
+    <resultMap id="pageSort" type="com.lm.agriculture.entity.Sort">
         <result column="id" property="id"/>
         <result column="sortname" property="sortname"/>
-        <collection property="products" javaType="java.util.ArrayList" ofType="com.lm.flowershop.entity.Product">
+        <collection property="products" javaType="java.util.ArrayList" ofType="com.lm.agriculture.entity.Product">
             <result column="name" property="name"/>
             <result column="pro_from" property="proFrom"/>
             <result column="pro_sales" property="proSales"/>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lm.flowershop.mapper.OutMapper">
-    <select id="findPage" resultType="com.lm.flowershop.entity.Outstorage">
+<mapper namespace="com.lm.agriculture.mapper.OutMapper">
+    <select id="findPage" resultType="com.lm.agriculture.entity.Outstorage">
         select fl_out.*, fl_product.name as proname,fl_product.pro_stock as prostock,fl_product.pro_sales as prosales  from fl_out
         left join fl_product
         on fl_out.out_Name = fl_product.id
@@ -24,7 +24,7 @@
             </if>
         </where>
     </select>
-    <select id="findPage1" resultType="com.lm.flowershop.entity.Outstorage">
+    <select id="findPage1" resultType="com.lm.agriculture.entity.Outstorage">
         select * from fl_out
         <where>
             <if test="startTime!=null and startTime.trim() neq ''">

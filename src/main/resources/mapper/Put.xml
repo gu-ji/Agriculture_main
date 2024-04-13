@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lm.flowershop.mapper.PutMapper">
-    <select id="findPage" resultType="com.lm.flowershop.entity.Putstorage">
+<mapper namespace="com.lm.agriculture.mapper.PutMapper">
+    <select id="findPage" resultType="com.lm.agriculture.entity.Putstorage">
         select fl_put.*, fl_product.name as proname,fl_product.pro_stock as prostock  from fl_put
         left join fl_product
         on fl_put.put_Name = fl_product.id
